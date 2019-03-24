@@ -12,13 +12,12 @@ function init() {
 
 	let memory;
 	var changeSrc = function(event) {
-		let imgs = document.getElementById("event").getElementsByTagName("img")
-		for (var i = imgs.length - 1; i >= 0; i--) {
-			imgs[i].src="flower1.png";
-		}
+		
 		if (event.target.src) {
-			event.target.src = "flower2.png";
-			
+			if(event.target.src.includes("flower1.png"))
+				event.target.src="flower2.png";	
+			else
+				event.target.src="flower1.png";
 		}
 	};
 
